@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@using Csharp_LognReg.Models
+@model User
+
+    <h1 class="header"><b>New User Registration</b></h1>
+
+
+    <form asp-action="Register" asp-controller="Home" method="post">
+        
+        <span asp-validation-for="Firstname"></span><br>
+        <label asp-for="Firstname"></label>
+        <input asp-for="Firstname"><br>
+
+        <span asp-validation-for="Lastname"></span><br>
+        <label asp-for="Lastname"></label>
+        <input asp-for="Lastname"><br>
+
+        <span asp-validation-for="Email"></span><br>
+        <label asp-for="Email"></label>
+        <input asp-for="Email"><br>
+
+        <span asp-validation-for="Password"></span><br>
+        <label asp-for="Password"></label>
+        <input asp-for="Password"><br>
+
+        <span asp-validation-for="Confirm"></span><br>
+        <label asp-for="Confirm"></label>
+        <input asp-for="Confirm"><br>
+
+        <input value="Register" class="btn btn-primary" type="submit">
+        <div class="buttonz">
+            already registered? use:
+        <a href="/login" class="btn btn-primary">User Login</a>
+        <!-- <a href="/" class="btn btn-primary">HOME</a> -->
+        </div>
+    </form>
